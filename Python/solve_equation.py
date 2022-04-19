@@ -9,14 +9,14 @@ rho = 7.85*1000
 g = 9.81
 
 # initialize unknown variables
-R = symbols('R')
+x = symbols('x')
 
-# define equation variables
-v2 = Eq(((3*(a**3)*pi*(80*a*rho*g*pi*(R**2)+57*P)) /
-        (2*E*(9*(pi**2)-64)*R**4)), R/10)
+# define equation variables Eq(lefthandside,righthandside)
+equation = Eq(((3*(a**3)*pi*(80*a*rho*g*pi*(x**2)+57*x)) /
+               (2*E*(9*(pi**2)-64)*x**4)), x/10)
 
 # solve eqation
-result = solve((v2), (R))
+result = solve((equation), (x))
 
 # print all results
 print(result)
